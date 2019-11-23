@@ -1,5 +1,5 @@
 .footer {
-  padding: 40px 20px;
+  padding: 40px 20px 20px 20px;
   flex-grow: 0;
   color: $light-color-secondary;
 
@@ -22,6 +22,10 @@
     align-items: center;
     font-size: 1rem;
     color: $light-color-secondary;
+
+    &.footer__attribution{
+      font-size: 0.7rem;
+    }
 
     @media #{$media-size-tablet} {
       flex-direction: column;
