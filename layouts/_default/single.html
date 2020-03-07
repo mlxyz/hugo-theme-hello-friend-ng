@@ -27,9 +27,24 @@
                 <img src="/img/{{ . }}" class="post-cover" />
             {{ end }}
 
+            {{ if .Params.impressum }}
+            <style type="text/css">
+              .impressum-content > p {
+                direction: rtl !important;
+                unicode-bidi: bidi-override !important;
+              }
+              .spam-protection{
+                display: none;
+              }
+            </style>
+            <div class="impressum-content">
+                {{ .Content }}
+            </div>
+            {{ else }}
             <div class="post-content">
                 {{ .Content }}
             </div>
+            {{ end }}
         </article>
 
         <hr />
